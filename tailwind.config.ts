@@ -73,7 +73,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       height: {
-        main: "calc(100dvh - 60px)",
+        main: "calc(100dvh - 64px)",
       },
     },
   },

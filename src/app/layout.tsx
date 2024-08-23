@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/ui/header";
+import Progress from "@/components/Progress";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(inter.className, "flex flex-col min-h-dvh")}>
         <Header />
+        <Progress />
         <main className="flex-grow">{children}</main>
       </body>
     </html>
