@@ -24,15 +24,36 @@ const item: Variants = {
   show: { opacity: 1 },
 };
 
+const textVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+    y: -100,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
+};
 const KeywordSection = () => {
   return (
-    <section className="h-main p-40 flex justify-center items-center">
+    <section className="h-main p-40 flex justify-center flex-col gap-8">
+      <motion.h2
+        className="text-5xl font-bold"
+        initial="offscreen"
+        whileInView="onscreen"
+        variants={textVariants}
+      >
+        Keywords
+      </motion.h2>
       <motion.ul
         variants={container}
         initial="hidden"
         whileInView="show"
         className="grid grid-cols-3 gap-12"
-        viewport={{ once: true, amount: 0.8 }}
+        // viewport={{ once: true, amount: 0.8 }}
       >
         <motion.li variants={item}>
           <Card className="w-80 border-0 shadow-none">
