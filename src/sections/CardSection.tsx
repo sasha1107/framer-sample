@@ -8,12 +8,14 @@ import {
 } from "@/components/ui/card";
 import { motion, Variants } from "framer-motion";
 
-const cardVariants: Variants = {
+const textVariants: Variants = {
   offscreen: {
-    y: 300,
+    opacity: 0,
+    x: -300,
   },
   onscreen: {
-    y: 0,
+    opacity: 1,
+    x: 0,
     rotate: 0,
     transition: {
       type: "spring",
@@ -22,18 +24,43 @@ const cardVariants: Variants = {
     },
   },
 };
+const cardVariants: Variants = {
+  offscreen: {
+    opacity: 0,
+    y: -50,
+  },
+  onscreen: {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    transition: {
+      type: "spring",
+      bounce: 0.4,
+      duration: 0.8,
+      delay: 0.8,
+    },
+  },
+};
 const CardSection = () => {
   return (
     <section className="h-main p-20 flex justify-center items-center">
       <div className="flex flex-col gap-8 items-center">
-        <h1 className="text-3xl font-medium">Lorem ipsum dolor</h1>
-        <p className="text-slate-600">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </p>
+        <motion.div
+          className="flex flex-col gap-8 w-full text-left"
+          initial="offscreen"
+          whileInView="onscreen"
+          // viewport={{ once: true }}
+          variants={textVariants}
+        >
+          <h1 className="text-3xl font-bold">Lorem ipsum dolor</h1>
+          <p className="text-slate-600">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+        </motion.div>
         <motion.div
           initial="offscreen"
           whileInView="onscreen"
-          viewport={{ once: true, amount: 0.8 }}
+          // viewport={{ once: true }}
         >
           <div className="grid grid-cols-3 gap-4 mt-8">
             <motion.div variants={cardVariants}>
