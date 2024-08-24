@@ -43,7 +43,7 @@ const cardVariants: Variants = {
 };
 const CardSection = () => {
   return (
-    <section className="h-main p-20 flex justify-center items-center">
+    <section className="h-main p-10 md:p-40 flex justify-center items-center">
       <div className="flex flex-col gap-8 items-center">
         <motion.div
           className="flex flex-col gap-8 w-full text-left"

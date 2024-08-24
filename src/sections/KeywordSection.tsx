@@ -39,7 +39,7 @@ const textVariants: Variants = {
 };
 const KeywordSection = () => {
   return (
-    <section className="h-main p-40 flex justify-center flex-col gap-8">
+    <section className="h-main p-10 md:p-40 flex justify-center flex-col gap-8">
       <motion.h2
         className="text-5xl font-bold"
         initial="offscreen"
