@@ -2,6 +2,7 @@ import Hero from "@/sections/Hero";
 import CardSection from "@/sections/CardSection";
 import KeywordSection from "@/sections/KeywordSection";
 import ChartSection from "@/sections/ChartSection";
+import HoverSection from "@/sections/HoverSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <CardSection />
       <KeywordSection />
       <ChartSection />
+      <HoverSection />
     </>
   );
 }
