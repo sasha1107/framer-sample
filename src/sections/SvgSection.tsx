@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
+import type { CheckedState } from "@radix-ui/react-checkbox";
 import { cn } from "@/lib/utils";
 
 const pathCircleVariants = {
@@ -36,7 +37,7 @@ const pathCheckVariants = {
   },
 };
 const SvgSection = () => {
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState<CheckedState>(false);
   return (
     <section className="h-main flex justify-center items-center flex-col gap-8">
       <div className="w-[120px] h-[120px]">
@@ -71,8 +72,7 @@ const SvgSection = () => {
         <Checkbox
           id="terms"
           checked={checked}
-          disabled={checked}
-          onCheckedChange={(isChecked) => isChecked && setChecked(true)}
+          onCheckedChange={(isChecked) => setChecked(isChecked)}
         />
         <label
           htmlFor="terms"
