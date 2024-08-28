@@ -3,6 +3,7 @@ import CardSection from "@/sections/CardSection";
 import KeywordSection from "@/sections/KeywordSection";
 import ChartSection from "@/sections/ChartSection";
 import HoverSection from "@/sections/HoverSection";
+import SvgSection from "@/sections/SvgSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <KeywordSection />
       <ChartSection />
       <HoverSection />
+      <SvgSection />
     </>
   );
 }
