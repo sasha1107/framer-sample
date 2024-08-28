@@ -10,7 +10,7 @@ const Pointer = () => {
   return (
     <motion.div
       ref={ref}
-      className="w-10 rounded-full h-10 fixed border border-slate-500"
+      className="w-10 rounded-full h-10 fixed border border-slate-500 pointer-events-none"
       style={{ x, y }}
       transition={{ type: "spring" }}
     />
